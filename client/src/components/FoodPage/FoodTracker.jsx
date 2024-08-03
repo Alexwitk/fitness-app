@@ -32,7 +32,7 @@ const FoodTracker = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchBoxRef.current && !searchBoxRef.current.contains(event.target)) {
-        setActiveMeal('');
+        // setActiveMeal('');
       }
     };
 
@@ -296,13 +296,13 @@ const FoodTracker = () => {
           <ul>
             {(foodLog.foods?.filter(f => f.meal === meal) || []).map((food, index) => (
               <li key={index}>
-                <div >
-                  {food.foodItem.description} - {food.foodItem.nutrients.calories * food.quantity} calories
-                  {showMacros[`${meal}-${index}`] && (
-                    <div>
-                      <p>Protein: {food.foodItem.nutrients.protein * food.quantity} g</p>
-                      <p>Fat: {food.foodItem.nutrients.fat * food.quantity} g</p>
-                      <p>Carbohydrates: {food.foodItem.nutrients.carbohydrates * food.quantity} g</p>
+<div>
+  {food.foodItem.description} - {(food.foodItem.nutrients.calories * food.quantity).toFixed(1)} calories
+  {showMacros[`${meal}-${index}`] && (
+    <div>
+      <p>Protein: {(food.foodItem.nutrients.protein * food.quantity).toFixed(1)} g</p>
+      <p>Fat: {(food.foodItem.nutrients.fat * food.quantity).toFixed(1)} g</p>
+      <p>Carbohydrates: {(food.foodItem.nutrients.carbohydrates * food.quantity).toFixed(1)} g</p>
                       <label>
                         Servings:
                         <input
