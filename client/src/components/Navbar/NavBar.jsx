@@ -5,52 +5,64 @@ import {
   MenuItem,
   FormControl,
   Box,
+  IconButton,
 } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { setLogout } from '../../state/index.js';
 import { useNavigate } from "react-router-dom";
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import '../../NavBar.css'; 
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const goToWeightTracker = () => {
+    navigate('/weight-tracker');
+  };
+
+  const goToFoodTracker = () => {
+    navigate('/food-tracker');
+  };
+
   return (
-    <Box display="flex" justifyContent="space-between" padding="1rem 6%">
+    <Box className="navbar">
       <Typography
-        fontWeight="bold"
-        fontSize="clamp(1rem, 2rem, 2.25rem)"
-        color="primary"
+        className="navbar-title"
         onClick={() => navigate("/homepage")}
-        sx={{
-          "&:hover": {
-            cursor: "pointer",
-          },
-        }}
       >
         Fitness
       </Typography>
 
-      <FormControl variant="standard" >
-        <Select
-          value="Fitness App" 
-          sx={{
-            width: "150px",
-            borderRadius: "0.25rem",
-            p: "0.25rem 1rem",
-            "& .MuiSvgIcon-root": {
-              pr: "0.25rem",
-              width: "3rem",
-            },
-            "& .MuiSelect-select:focus": {
-            },
-          }}
+      <Box className="navbar-buttons-container">
+        <IconButton
+          onClick={goToWeightTracker}
+          className="navbar-button"
         >
-            <MenuItem value="Fitness App" disabled>
-            Fitness App
-          </MenuItem>
-          <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
-        </Select>
-      </FormControl>
+          <FitnessCenterIcon className="navbar-icon" />
+        </IconButton>
+        <IconButton
+          onClick={goToFoodTracker}
+          className="navbar-button"
+        >
+          <FastfoodIcon className="navbar-icon" />
+        </IconButton>
+      </Box>
+
+      <Box className="navbar-select-container">
+        <FormControl variant="standard" className="navbar-select">
+          <Select
+            value="Fitness App"
+            className="navbar-select-input"
+          >
+            <MenuItem value="Fitness App" disabled className="navbar-menu-item">
+              Fitness App
+            </MenuItem>
+            <MenuItem onClick={() => dispatch(setLogout())} className="navbar-menu-item">Log Out</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
     </Box>
   );
 };

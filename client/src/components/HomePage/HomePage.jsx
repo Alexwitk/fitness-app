@@ -1,21 +1,19 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/NavBar';  
+import fitnessImage from '../../assets/homepage-image.jpeg';
+import '../../HomePage.css'; 
 
 const HomePage = () => {
-    const navigate = useNavigate();
-
-    const goToWeightTracker = () => {
-        navigate('/weight-tracker');
-    };
-    const goToFoodTracker = () => {
-        navigate('/food-tracker');
-    };
     return (
         <div className="homepage">
             <Navbar />
-            <button onClick={goToWeightTracker}>Go to Weight Tracker</button>
-            <button onClick={goToFoodTracker}>Go to Food Tracker</button>
+            <div className="image-container">
+                <img src={fitnessImage} alt="Fitness" className="homepage-image" />
+                <div className="welcome-message">
+                    Welcome to the Fitness App! <br />
+                    Track your calories, monitor your weight, and stay motivated.
+                </div>
+            </div>
         </div>
     );
 };

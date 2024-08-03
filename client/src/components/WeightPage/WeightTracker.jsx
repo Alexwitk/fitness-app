@@ -85,9 +85,6 @@ const WeightTracker = () => {
         }
     };
 
-    useEffect(() => {
-        console.log('Weights updated:', weights);
-    }, [weights]);
 
     const handleViewChange = e => {
         setView(e.target.value);
@@ -256,12 +253,9 @@ const WeightTracker = () => {
         },
         onClick: (e, elements, chart) => {
             if (elements.length > 0) {
-                console.log(elements);
-                console.log(e);
                 const elementIndex = elements[0].index;
                 const selectedDate = labels[elementIndex];
                 const chartPosition = chart.canvas.getBoundingClientRect();
-                console.log(chartPosition);
                 setMenuPosition({ x: e.x, y: 300 + e.y });
                 setSelectedDate(selectedDate);
                 setShowMenu(true);

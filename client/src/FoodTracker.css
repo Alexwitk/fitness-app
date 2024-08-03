@@ -1,0 +1,175 @@
+.food-tracker {
+  margin: 0 auto;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; 
+}
+
+.date-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.date-navigation button {
+  width: 150px;
+  background-color: #007bff;
+  border-radius: 1px;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin: 5 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 18px; 
+}
+
+.date-navigation button:hover {
+  background-color: #0056b3;
+}
+
+.date-navigation span {
+  font-size: 18px;
+  color: #333;
+  margin: 0 10px; 
+}
+
+.total-nutrients {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.total-nutrients h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.total-nutrients p {
+  margin: 5px 0;
+}
+
+.food-tracker h3 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #333;
+  text-align: center; 
+}
+
+.food-tracker button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.food-tracker button:hover {
+  background-color: #0056b3;
+}
+
+.food-tracker input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.food-tracker ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.food-tracker ul li {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-tracker ul li:hover {
+  background-color: #f1f1f1;
+}
+
+.food-tracker ul li div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.food-tracker ul li div p {
+  margin: 0;
+}
+
+.food-tracker ul li .delete-button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.food-tracker .nutrients {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.food-tracker .nutrients p {
+  margin: 5px 0;
+}
+
+.fixed-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.fixed-popup button {
+  margin-top: 10px;
+}
+
+.fixed-popup h3 {
+  margin-top: 0;
+}
+
+.fixed-popup label {
+  display: block;
+  margin: 10px 0;
+}
+
+.fixed-popup input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.food-tracker ul li .toggle-button {
+  background: none;
+  border: none;
+  color: blue;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 10px;
+}

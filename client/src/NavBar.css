@@ -1,0 +1,72 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6%;
+    background-color: #2528d9; 
+  }
+  
+  .navbar-title {
+    font-weight: bold !important;
+    font-size: clamp(1rem, 2rem, 2.25rem) !important;
+    color: #fff !important;
+    cursor: pointer;
+    margin-right: 2rem !important;
+  }
+  
+  .navbar-buttons-container {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .navbar-button {
+    padding: 8px !important;
+    font-size: 0 !important;
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .navbar-button:hover {
+    background-color: #0056b3 !important; 
+  }
+  
+  .navbar-icon {
+    font-size: 1.5rem !important;
+  }
+  
+  .navbar-select-container {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem !important;
+  }
+  
+  .navbar-select {
+    color: #fff !important;
+    width: 150px !important;
+    border-radius: 0.25rem !important;
+    padding: 0.25rem 1rem !important;
+  }
+  
+  .navbar-select .MuiSvgIcon-root {
+    padding-right: 0.25rem !important;
+    width: 3rem !important;
+    color: #fff !important;
+  }
+  
+  .navbar-select .MuiSelect-select:focus {
+    background-color: transparent !important;
+  }
+  
+  .navbar-select-input {
+    color: #fff !important;
+  }
+  
+  .navbar-menu-item {
+    color: #000000 !important;
+  }
+  

@@ -6,8 +6,8 @@ import Register from './components/RegisterPage/Register';
 import HomePage from './components/HomePage/HomePage';
 import WeightTracker from './components/WeightPage/WeightTracker';
 import FoodTracker from './components/FoodPage/FoodTracker';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 function App() {
-  // const mode = useSelector((state) => state.mode);
   const isAuth = Boolean(useSelector((state) => state.token));
 
   return (

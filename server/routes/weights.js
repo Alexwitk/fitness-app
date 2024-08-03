@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post("/addWeight", addWeight);
 router.get("/getWeights", getWeights);
-router.put('/updateWeight', updateWeight); // Add this line
+router.put('/updateWeight', updateWeight); 
 router.delete('/deleteWeight', deleteWeight);
 router.delete('/deleteWeightRange', deleteWeightRange)
 module.exports = router;
